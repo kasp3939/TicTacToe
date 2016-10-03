@@ -58,10 +58,11 @@ namespace TicTacToe
                 return currentWinningSymbol;
 
             currentWinningSymbol = CheckForThreeInARowInVerticalColumn(gameBoard);
-            return currentWinningSymbol;
+            if (currentWinningSymbol != SymbolForNoWinner)
+                return currentWinningSymbol;
 
             currentWinningSymbol = CheckForThreeInARowDiagonally(gameBoard);
-            return currentWinningSymbol;
+                return currentWinningSymbol;
 
         }
 

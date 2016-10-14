@@ -9,9 +9,11 @@ namespace TicTacToe
     [TestClass]
     public class GameWinnerService : IGameWinnerService
     {
-        //public GameWinnerService _gameWinnerService { get; private set; }
-        //public char[,] _gameboard { get; private set; }
+
         private const char SymbolForNoWinner = ' ';
+
+        private char[,] _gameboard;
+        IGameWinnerService _gameWinnerService;
 
         [TestMethod]
         public void NeitherPlayerHasthreeInARow()
